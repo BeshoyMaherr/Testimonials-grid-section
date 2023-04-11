@@ -1,0 +1,141 @@
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background-color: var(--Light-gray);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: 1fr;
+  gap: 30px;
+}
+@media (max-width: 575px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+main div {
+  padding: 20px;
+  border-radius: 6px;
+}
+main div .image {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+  padding: 0;
+}
+@media (max-width: 575px) {
+  main div .image {
+    margin: 0;
+  }
+}
+main div .image img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+main div .image .text {
+  padding: 0;
+  margin-left: 20px;
+}
+@media (max-width: 575px) {
+  main div .image .text {
+    margin-left: 10px;
+  }
+  main div .image .text h2 {
+    font-size: 16px !important;
+  }
+  main div .image .text h4 {
+    font-size: 14px !important;
+  }
+}
+main div .image .text h2 {
+  margin: 0;
+  color: var(--White);
+  font-size: 18px;
+  font-weight: normal;
+}
+main div .image .text h4 {
+  margin: 0;
+  color: hsla(0, 0%, 100%, 50%);
+  font-size: 16px;
+}
+main .three .image .text h2,
+main .five .image .text h2 {
+  color: black;
+}
+main .three .image .text h4,
+main .five .image .text h4 {
+  color: rgb(0, 0, 0, 50%);
+}
+main div .p1 {
+  font-weight: bold;
+  color: var(--Light-grayish-blue);
+  font-size: 25px;
+}
+main .three .p1,
+main .five .p1 {
+  color: black;
+}
+main div .p2 {
+  color: hsla(0, 0%, 100%, 70%);
+  line-height: 1.5;
+  font-size: 18px;
+}
+main .three .p2,
+main .five .p2 {
+  color: rgb(0, 0, 0, 70%);
+}
+main .one i {
+  position: absolute;
+  font-size: 215px;
+  top: -39px;
+  right: 78px;
+  color: hsla(0deg 0% 81% / 40%);
+}
+@media (max-width: 575px) {
+  main .one i {
+    top: -40px;
+    right: 5px;
+  }
+}
+main .one {
+  background-color: var(--Moderate-violet);
+  grid-area: 1 / 1 / 1 / span 2;
+  position: relative;
+}
+main .two {
+  background-color: var(--Very-dark-grayish-blue);
+}
+main .three {
+  background-color: var(--White);
+}
+main .four {
+  background-color: var(--Very-dark-blackish-blue);
+  grid-area: 2 / 2 / 2 / span 2;
+}
+main .five {
+  background-color: var(--White);
+  grid-area: 1 / 4 / span 2 / 4;
+}
+/* @media (max-width: 575px) {
+  main .one,
+  main .three,
+  main .five {
+    grid-area: unset;
+  }
+} */
